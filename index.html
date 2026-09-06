@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juan Esteban Robles — Chatbots, Bots RPA y Cloud para tu empresa</title>
+  <meta name="description"
+    content="Diseño y desarrollo de chatbots, bots RPA que imitan el comportamiento humano e infraestructura en AWS. Automatización inteligente para empresas." />
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232563EB'/%3E%3Cstop offset='1' stop-color='%2322D3EE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='28' font-weight='bold' fill='white' text-anchor='middle'%3EJR%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#inicio" class="nav__brand">
+        <span class="nav__logo">JR</span>
+        <span class="nav__name">Juan Esteban Robles</span>
+      </a>
+      <nav class="nav__links">
+        <a href="#servicios">Servicios</a>
+        <a href="#rpa">Bots RPA</a>
+        <a href="#sectores">Sectores</a>
+        <a href="#sobre-mi">Sobre mí</a>
+      </nav>
+      <a href="#contacto" class="btn btn--primary btn--sm">Hablemos</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <span class="badge">Arquitecto de Software · +6 años de experiencia</span>
+          <h1>Automatización que <span class="text-gradient">trabaja por tu empresa</span></h1>
+          <p class="hero__lead">
+            Diseño chatbots inteligentes, bots RPA que imitan el comportamiento humano
+            e infraestructura en la nube de AWS. Soluciones de software a la medida para
+            empresas que quieren vender más y operar mejor, sin aumentar costos.
+          </p>
+          <div class="hero__actions">
+            <a href="https://wa.me/573015459744?text=Hola%20Juan%2C%20quiero%20automatizar%20procesos%20en%20mi%20empresa"
+              target="_blank" rel="noopener" class="btn btn--primary">
+              Agenda una llamada
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#servicios" class="btn btn--ghost">Ver servicios</a>
+          </div>
+          <div class="hero__stats">
+            <div class="stat">
+              <strong>+6 años</strong>
+              <span>de experiencia en software</span>
+            </div>
+            <div class="stat">
+              <strong>90%</strong>
+              <span>de ahorro en costos operativos</span>
+            </div>
+            <div class="stat">
+              <strong>24/7</strong>
+              <span>operación automatizada</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="chat-mock float-slow">
+            <div class="chat-mock__header">
+              <span class="chat-mock__dot"></span>
+              <span class="chat-mock__dot"></span>
+              <span class="chat-mock__dot"></span>
+              <span class="chat-mock__title">Chatbot de ventas · WhatsApp</span>
+            </div>
+            <div class="chat-mock__body">
+              <div class="msg msg--bot">¡Hola! Soy el asistente virtual. ¿En qué puedo ayudarte hoy?</div>
+              <div class="msg msg--user">Quiero ver camisetas en talla M</div>
+              <div class="msg msg--bot">Encontré 12 camisetas disponibles en talla M. Te comparto el catálogo…</div>
+              <div class="chat-mock__success">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+                Pedido #1024 confirmado
+              </div>
+            </div>
+          </div>
+          <div class="rpa-mock float-fast">
+            <div class="rpa-mock__header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <rect x="9" y="9" width="6" height="6" />
+                <path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2" />
+              </svg>
+              Bot RPA · Playwright
+            </div>
+            <p class="rpa-mock__task">Migrando registros al sistema…</p>
+            <div class="rpa-mock__bar"><span></span></div>
+            <p class="rpa-mock__meta">1.842 / 2.000 · Un mes de trabajo, hecho en días</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Retail &amp;
+          Moda</span><i></i><span>Ventas</span><i></i><span>Hotelería</span><i></i><span>Restaurantes</span><i></i><span>Servicio
+          al Cliente</span><i></i><span>WhatsApp Business</span><i></i><span>Automatización 24/7</span><i></i>
+        <span>Retail &amp;
+          Moda</span><i></i><span>Ventas</span><i></i><span>Hotelería</span><i></i><span>Restaurantes</span><i></i><span>Servicio
+          al Cliente</span><i></i><span>WhatsApp Business</span><i></i><span>Automatización 24/7</span><i></i>
+      </div>
+    </div>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__label">Servicios</span>
+          <h2>Soluciones de automatización a la medida</h2>
+          <p>Tres líneas de servicio para eliminar el trabajo repetitivo, atender mejor a tus clientes y escalar tu
+            operación.</p>
+        </div>
+
+        <div class="cards">
+          <!-- Chatbots -->
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
+            </div>
+            <h3>Chatbots inteligentes</h3>
+            <p>
+              Diseño y desarrollo de chatbots que automatizan conversaciones y flujos de
+              negocio de principio a fin: ventas, reservas, pedidos y atención al cliente.
+            </p>
+            <ul class="card__list">
+              <li>Flujos de venta y catálogo de productos</li>
+              <li>Reservas, pedidos y cotizaciones automáticas</li>
+              <li>Atención al cliente 24/7</li>
+              <li>Integración con WhatsApp y tus sistemas actuales</li>
+            </ul>
+          </article>
+
+          <!-- RPA destacado -->
+          <article class="card card--featured reveal">
+            <span class="card__tag">El más innovador</span>
+            <div class="card__icon card__icon--grad">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <rect x="9" y="9" width="6" height="6" />
+                <path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2" />
+              </svg>
+            </div>
+            <h3>Bots RPA con Playwright</h3>
+            <p>
+              Bots que <strong>imitan el comportamiento humano en un computador</strong>: navegan,
+              hacen clic, llenan formularios y mueven datos entre sistemas, igual que una
+              persona, pero sin cansarse ni equivocarse.
+            </p>
+            <ul class="card__list">
+              <li>Automatiza sin necesidad de APIs ni integraciones</li>
+              <li>Entrada y migración masiva de datos</li>
+              <li>Extracción de información de sitios web</li>
+              <li>Operación continua, rápida y sin errores</li>
+            </ul>
+            <a href="#rpa" class="card__link">
+              Conoce cómo funciona
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- AWS -->
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.5 19a4.5 4.5 0 0 0 .42-8.98 6 6 0 0 0-11.7 1.62A4 4 0 0 0 7 19h10.5z" />
+              </svg>
+            </div>
+            <h3>Infraestructura en AWS</h3>
+            <p>
+              Administración de tu infraestructura en la nube de Amazon: servidores, bases
+              de datos, despliegues y monitoreo, con foco en seguridad y optimización de costos.
+            </p>
+            <ul class="card__list">
+              <li>Arquitectura y despliegue de aplicaciones en AWS</li>
+              <li>Optimización de costos en la nube</li>
+              <li>Seguridad, respaldos y alta disponibilidad</li>
+              <li>Monitoreo y escalabilidad bajo demanda</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RPA DESTACADO ============ -->
+    <section class="section section--dark rpa" id="rpa">
+      <div class="rpa__glow"></div>
+      <div class="container">
+        <div class="rpa__grid">
+          <div class="reveal">
+            <span class="section__label section__label--light">Automatización Robótica de Procesos</span>
+            <h2>Un bot que usa el computador <span class="text-gradient">como lo haría una persona</span></h2>
+            <p class="rpa__lead">
+              La RPA (Robotic Process Automation) consiste en bots de software que operan las
+              aplicaciones de tu empresa <strong>imitando el comportamiento humano</strong>: abren el
+              navegador, inician sesión, hacen clic, leen pantallas, copian información y llenan
+              formularios. Con Playwright, estos bots controlan navegadores reales con una
+              precisión milimétrica.
+            </p>
+            <p class="rpa__lead">
+              ¿La mejor parte? No necesitas cambiar tus sistemas ni contratar integraciones
+              costosas. Si una persona puede hacerlo en un computador, un bot RPA puede
+              hacerlo más rápido, sin pausas y sin errores.
+            </p>
+            <div class="rpa__chips">
+              <span class="chip">Sin cambios en tus sistemas</span>
+              <span class="chip">Cero errores humanos</span>
+              <span class="chip">Trabaja 24/7</span>
+              <span class="chip">Retorno de inversión en semanas</span>
+            </div>
+          </div>
+
+          <div class="rpa__steps reveal">
+            <div class="step">
+              <div class="step__num">1</div>
+              <div>
+                <h4>Observa</h4>
+                <p>El bot abre la aplicación web o el sistema de tu empresa, igual que lo haría un operario.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num">2</div>
+              <div>
+                <h4>Ejecuta</h4>
+                <p>Hace clic, escribe, navega y completa las tareas paso a paso, con la lógica de tu negocio.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num">3</div>
+              <div>
+                <h4>Entrega</h4>
+                <p>Guarda los resultados, genera reportes y notifica cuando termina. Tú solo revisas.</p>
+              </div>
+            </div>
+            <div class="rpa__quote">
+              <p>Procesos que antes tomaban <strong>un mes de trabajo manual</strong> se completan en <strong>tres
+                  días</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTORES ============ -->
+    <section class="section" id="sectores">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__label">Experiencia comprobada</span>
+          <h2>Sectores que ya he automatizado</h2>
+          <p>He construido flujos conversacionales y automatizaciones para empresas reales en estos sectores.</p>
+        </div>
+        <div class="sectors">
+          <div class="sector reveal">
+            <div class="sector__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <path d="M3 6h18" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+              </svg>
+            </div>
+            <h4>Retail &amp; Moda</h4>
+            <p>Flujos de venta de ropa por chat: catálogo, tallas, pedidos y cierre de venta automático.</p>
+          </div>
+          <div class="sector reveal">
+            <div class="sector__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18" />
+                <path d="m7 14 4-4 4 4 5-6" />
+              </svg>
+            </div>
+            <h4>Ventas</h4>
+            <p>Cotizaciones, seguimiento de clientes y embudos de venta que convierten sin intervención humana.</p>
+          </div>
+          <div class="sector reveal">
+            <div class="sector__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18" />
+                <path d="M5 21V7l7-4 7 4v14" />
+                <path d="M9 21v-4h6v4" />
+                <path d="M9 10h.01M15 10h.01M9 14h.01M15 14h.01" />
+              </svg>
+            </div>
+            <h4>Hotelería</h4>
+            <p>Reservas, disponibilidad y atención a huéspedes respondida al instante, a cualquier hora.</p>
+          </div>
+          <div class="sector reveal">
+            <div class="sector__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+                <path d="M7 2v20" />
+                <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7" />
+              </svg>
+            </div>
+            <h4>Restaurantes</h4>
+            <p>Toma de pedidos, reservas de mesas y menú digital directamente desde el chat.</p>
+          </div>
+          <div class="sector reveal">
+            <div class="sector__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                <path
+                  d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+              </svg>
+            </div>
+            <h4>Servicio al Cliente</h4>
+            <p>Respuestas instantáneas 24/7 que reducen la carga de tu equipo y mejoran la experiencia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE MÍ ============ -->
+    <section class="section section--soft" id="sobre-mi">
+      <div class="container about__grid">
+        <div class="about__card reveal">
+          <div class="about__avatar">JR</div>
+          <h3>Juan Esteban Robles Chanagá</h3>
+          <p class="about__role">Arquitecto de Software · Ingeniero Full Stack</p>
+          <p class="about__location">Bucaramanga, Colombia</p>
+          <div class="about__certs">
+            <span class="chip chip--light">Certificación en Cálculo para Inteligencia Artificial</span>
+            <span class="chip chip--light">Inglés C1 Advanced</span>
+            <span class="chip chip--light">Linux</span>
+            <span class="chip chip--light">SQL</span>
+          </div>
+        </div>
+        <div class="about__content reveal">
+          <span class="section__label">Sobre mí</span>
+          <h2>Ingeniería seria, resultados medibles</h2>
+          <p>
+            Soy Arquitecto de Software y Tech Lead con más de 6 años construyendo soluciones empresariales:
+            he liderado equipos de desarrollo, modernizado sistemas legacy e integrado
+            inteligencia artificial generativa (OpenAI, Gemini, Anthropic, DeepSeek) en procesos de negocio reales.
+          </p>
+          <p>
+            Construyo sistemas que reducen costos y se pueden medir.
+          </p>
+          <div class="about__results">
+            <div class="result">
+              <strong>&lt;1 segundo</strong>
+              <p>de tiempo de respuesta de un chatbot, 24/7. Una atención instantánea que ningún humano puede sostener.
+              </p>
+            </div>
+            <div class="result">
+              <strong>1 mes → 3 días</strong>
+              <p>en la migración de 2.000 registros, reemplazando el trabajo manual de 5 personas.</p>
+            </div>
+            <div class="result">
+              <strong>10s → &lt;1s</strong>
+              <p>de mejora en tiempos de carga críticos mediante optimización de bases de datos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section section--dark cta" id="contacto">
+      <div class="cta__glow"></div>
+      <div class="container cta__inner reveal">
+        <h2>¿Listo para automatizar tu empresa?</h2>
+        <p>
+          Cuéntame qué proceso le quita tiempo a tu equipo y te propongo cómo automatizarlo.
+          La primera conversación no tiene ningún costo.
+        </p>
+        <div class="cta__actions">
+          <a href="https://wa.me/573015459744?text=Hola%20Juan%2C%20quiero%20automatizar%20procesos%20en%20mi%20empresa"
+            target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.83 9.83 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 9.88 9.89c0 5.45-4.44 9.88-9.89 9.88m8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.47-8.41" />
+            </svg>
+            Escríbeme por WhatsApp
+          </a>
+          <a href="mailto:juanse2164@hotmail.com" class="btn btn--ghost btn--lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-10 6L2 7" />
+            </svg>
+            juanse2164@hotmail.com
+          </a>
+        </div>
+        <a href="https://www.linkedin.com/in/juan-esteban-robles-chanaga" target="_blank" rel="noopener"
+          class="cta__linkedin">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45z" />
+          </svg>
+          Conecta conmigo en LinkedIn
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 Juan Esteban Robles Chanagá</span>
+      <span>Automatización · Chatbots · RPA · AWS</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
