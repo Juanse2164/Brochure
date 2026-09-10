@@ -283,7 +283,7 @@ const translations = {
         rpa: {
           title: "RPA Bots",
           task: "Replicating a person's work, faster and without errors…",
-          meta: "1,842 / 2,000 · One month of work, done in days",
+          meta: "One month of work, done in days",
           approved: "Approved",
         },
         database: {
