@@ -1,53 +1,10 @@
+import { ArrowRight, Check, Cloud, Cpu, MessageSquare, type LucideIcon } from "lucide-react"
 import type { ReactNode } from "react"
-import { ArrowRight, Check, Cloud, Cpu, MessageSquare } from "lucide-react"
 
 import { Reveal } from "@/components/reveal"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
-
-const chatbots = {
-  icon: MessageSquare,
-  title: "Chatbots inteligentes",
-  description:
-    "Diseño y desarrollo de chatbots que automatizan conversaciones y flujos de negocio de principio a fin: ventas, reservas, pedidos y atención al cliente.",
-  items: [
-    "Flujos de venta y catálogo de productos",
-    "Reservas, pedidos y cotizaciones automáticas",
-    "Atención al cliente 24/7",
-    "Integración con WhatsApp y tus sistemas actuales",
-  ],
-}
-
-const rpa = {
-  icon: Cpu,
-  title: "Bots RPA",
-  description: (
-    <>
-      Bots que <strong>imitan el comportamiento humano en un computador</strong>: navegan,
-      hacen clic, llenan formularios y mueven datos entre sistemas, igual que una
-      persona, pero sin cansarse ni equivocarse.
-    </>
-  ),
-  items: [
-    "Automatiza sin necesidad de APIs ni integraciones",
-    "Entrada y migración masiva de datos",
-    "Extracción de información de sitios web",
-    "Operación continua, rápida y sin errores",
-  ],
-}
-
-const aws = {
-  icon: Cloud,
-  title: "Infraestructura en AWS",
-  description:
-    "Administración de tu infraestructura en la nube de Amazon: servidores, bases de datos, despliegues y monitoreo, con foco en seguridad y optimización de costos.",
-  items: [
-    "Arquitectura y despliegue de aplicaciones en AWS",
-    "Optimización de costos en la nube",
-    "Seguridad, respaldos y alta disponibilidad",
-    "Monitoreo y escalabilidad bajo demanda",
-  ],
-}
+import { useLanguage } from "@/lib/i18n"
 
 function ServiceCard({
   icon: Icon,
@@ -55,13 +12,17 @@ function ServiceCard({
   description,
   items,
   featured = false,
+  tag,
+  link,
   delay = 0,
 }: {
-  icon: typeof MessageSquare
+  icon: LucideIcon
   title: string
   description: ReactNode
-  items: string[]
+  items: readonly string[]
   featured?: boolean
+  tag?: string
+  link?: string
   delay?: number
 }) {
   return (
@@ -73,9 +34,9 @@ function ServiceCard({
             : "h-full transition-transform duration-300 hover:-translate-y-1.5"
         }
       >
-        {featured && (
+        {featured && tag && (
           <div className="absolute -top-3.5 left-6">
-            <Badge className="font-bold">El más innovador</Badge>
+            <Badge className="font-bold">{tag}</Badge>
           </div>
         )}
         <div className="flex flex-col gap-5 px-6">
@@ -90,7 +51,12 @@ function ServiceCard({
             <Icon className="size-6" />
           </span>
           <h3 className="text-xl">{title}</h3>
-          <p className={"text-sm leading-relaxed " + (featured ? "text-main-foreground/70" : "text-foreground/70")}>
+          <p
+            className={
+              "text-sm leading-relaxed " +
+              (featured ? "text-main-foreground/70" : "text-foreground/70")
+            }
+          >
             {description}
           </p>
           <ul className="flex flex-col gap-2.5">
@@ -104,12 +70,12 @@ function ServiceCard({
             ))}
           </ul>
         </div>
-        {featured && (
+        {featured && link && (
           <a
             href="#rpa"
             className="mt-auto flex items-center gap-2 px-6 pt-2 font-bold underline-offset-4 hover:underline"
           >
-            Conoce cómo funciona
+            {link}
             <ArrowRight className="size-4" />
           </a>
         )}
@@ -119,23 +85,48 @@ function ServiceCard({
 }
 
 export function Services() {
+  const { copy } = useLanguage()
+  const cards = copy.services.cards
+
   return (
     <section id="servicios" className="scroll-mt-20 bg-background py-24">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <Reveal className="mx-auto mb-14 max-w-2xl text-center">
-          <Badge className="mb-4 font-bold">Servicios</Badge>
-          <h2 className="mb-4 text-3xl sm:text-4xl">
-            Soluciones de automatización a la medida
-          </h2>
-          <p className="text-foreground/70">
-            Tres líneas de servicio para eliminar el trabajo repetitivo, atender mejor a tus clientes y escalar tu operación.
-          </p>
+          <Badge className="mb-4 font-bold">{copy.services.label}</Badge>
+          <h2 className="mb-4 text-3xl sm:text-4xl">{copy.services.title}</h2>
+          <p className="text-foreground/70">{copy.services.description}</p>
         </Reveal>
 
         <div className="grid items-stretch gap-8 pt-3 md:grid-cols-3">
-          <ServiceCard {...chatbots} delay={0} />
-          <ServiceCard {...rpa} featured delay={100} />
-          <ServiceCard {...aws} delay={200} />
+          <ServiceCard
+            icon={MessageSquare}
+            title={cards.chatbots.title}
+            description={cards.chatbots.description}
+            items={cards.chatbots.items}
+          />
+          <ServiceCard
+            icon={Cpu}
+            title={cards.rpa.title}
+            description={
+              <>
+                {cards.rpa.descriptionBefore}
+                <strong>{cards.rpa.descriptionStrong}</strong>
+                {cards.rpa.descriptionAfter}
+              </>
+            }
+            items={cards.rpa.items}
+            featured
+            tag={cards.rpa.tag}
+            link={cards.rpa.link}
+            delay={100}
+          />
+          <ServiceCard
+            icon={Cloud}
+            title={cards.aws.title}
+            description={cards.aws.description}
+            items={cards.aws.items}
+            delay={200}
+          />
         </div>
       </div>
     </section>

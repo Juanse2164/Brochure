@@ -2,9 +2,7 @@ import { Mail } from "lucide-react"
 
 import { Reveal } from "@/components/reveal"
 import { Button } from "@/components/ui/button"
-
-const WHATSAPP_URL =
-  "https://wa.me/573015459744?text=Hola%20Juan%2C%20quiero%20automatizar%20procesos%20en%20mi%20empresa"
+import { useLanguage } from "@/lib/i18n"
 
 function WhatsAppIcon() {
   return (
@@ -23,6 +21,8 @@ function LinkedinIcon() {
 }
 
 export function Contact() {
+  const { copy } = useLanguage()
+
   return (
     <section
       id="contacto"
@@ -33,17 +33,14 @@ export function Contact() {
 
       <Reveal className="relative mx-auto w-full max-w-2xl px-4 text-center sm:px-6">
         <h2 className="mb-5 text-3xl sm:text-4xl">
-          ¿Listo para automatizar tu empresa?
+          {copy.contact.title}
         </h2>
-        <p className="mb-10 text-main-foreground/80">
-          Cuéntame qué proceso le quita tiempo a tu equipo y te propongo cómo automatizarlo.
-          La primera conversación no tiene ningún costo.
-        </p>
+        <p className="mb-10 text-main-foreground/80">{copy.contact.description}</p>
         <div className="mb-8 flex flex-wrap justify-center gap-4">
           <Button asChild size="lg" className="bg-secondary-background font-bold text-foreground">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener">
+            <a href={copy.contact.whatsappUrl} target="_blank" rel="noopener">
               <WhatsAppIcon />
-              Escríbeme por WhatsApp
+              {copy.contact.whatsapp}
             </a>
           </Button>
           <Button
@@ -52,9 +49,9 @@ export function Contact() {
             variant="outline"
             className="bg-secondary-background font-bold"
           >
-            <a href="mailto:juanse2164@hotmail.com">
+            <a href={`mailto:${copy.contact.email}`}>
               <Mail />
-              juanse2164@hotmail.com
+              {copy.contact.email}
             </a>
           </Button>
         </div>
@@ -65,7 +62,7 @@ export function Contact() {
           className="inline-flex items-center gap-2 font-bold underline-offset-4 hover:underline"
         >
           <LinkedinIcon />
-          Conecta conmigo en LinkedIn
+          {copy.contact.linkedin}
         </a>
       </Reveal>
     </section>
