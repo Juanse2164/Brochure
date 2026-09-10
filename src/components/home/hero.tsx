@@ -251,8 +251,7 @@ function DeckCard({
       tabIndex={0}
       aria-label={title}
       aria-pressed={active}
-      onMouseEnter={() => onActivate(id)}
-      onFocus={() => onActivate(id)}
+      onClick={() => onActivate(id)}
       onKeyDown={handleKeyDown}
       className={`absolute left-1/2 top-1/2 w-[min(82vw,330px)] cursor-pointer outline-none transition-[transform,filter] duration-300 ease-out focus-visible:ring-4 focus-visible:ring-ring/50 ${active ? "brightness-105 drop-shadow-[8px_8px_0_var(--border)]" : ""}`}
       style={{ transform, zIndex: active ? 50 : deckZIndexes[id] }}
