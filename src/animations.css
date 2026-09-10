@@ -10,6 +10,18 @@
   animation: float 7.5s ease-in-out 1.2s infinite;
 }
 
+.animate-resource-cpu {
+  animation: resource-cpu 2.8s ease-in-out infinite alternate;
+}
+
+.animate-resource-ram {
+  animation: resource-ram 3.4s ease-in-out 0.3s infinite alternate;
+}
+
+.animate-resource-network {
+  animation: resource-network 2.4s ease-in-out 0.6s infinite alternate;
+}
+
 @keyframes marquee {
   to {
     transform: translateX(-50%);
@@ -146,6 +158,51 @@
   }
 }
 
+@keyframes resource-cpu {
+  0% {
+    width: 28%;
+  }
+  38% {
+    width: 78%;
+  }
+  70% {
+    width: 46%;
+  }
+  100% {
+    width: 88%;
+  }
+}
+
+@keyframes resource-ram {
+  0% {
+    width: 62%;
+  }
+  35% {
+    width: 38%;
+  }
+  68% {
+    width: 82%;
+  }
+  100% {
+    width: 54%;
+  }
+}
+
+@keyframes resource-network {
+  0% {
+    width: 22%;
+  }
+  32% {
+    width: 72%;
+  }
+  65% {
+    width: 34%;
+  }
+  100% {
+    width: 92%;
+  }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -160,7 +217,10 @@
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee,
   .animate-float,
-  .animate-float-delayed {
+  .animate-float-delayed,
+  .animate-resource-cpu,
+  .animate-resource-ram,
+  .animate-resource-network {
     animation: none;
   }
 

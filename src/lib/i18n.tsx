@@ -58,6 +58,7 @@ const translations = {
           title: "Bases de datos",
           task: "Optimizando consultas críticas…",
           meta: "Rendimiento bajo control",
+          resources: ["CPU", "RAM", "Red"],
         },
         aws: {
           title: "Infraestructura en AWS",
@@ -289,6 +290,7 @@ const translations = {
           title: "Databases",
           task: "Optimizing critical queries…",
           meta: "Performance under control",
+          resources: ["CPU", "RAM", "Network"],
         },
         aws: {
           title: "AWS infrastructure",

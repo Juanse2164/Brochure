@@ -10,6 +10,7 @@ import {
   HardDrive,
   Layers,
   Maximize2,
+  MemoryStick,
   MousePointer2,
   Network,
   ShieldCheck,
@@ -121,6 +122,13 @@ function RpaCard({ copy }: { copy: ReturnType<typeof useLanguage>["copy"] }) {
 
 function DatabaseCard({ copy }: { copy: ReturnType<typeof useLanguage>["copy"] }) {
   const database = copy.hero.deck.database
+  const resourceIcons = [Cpu, MemoryStick, Network] as const
+  const resourceColors = ["bg-chart-3", "bg-chart-1", "bg-chart-4"] as const
+  const resourceAnimations = [
+    "animate-resource-cpu",
+    "animate-resource-ram",
+    "animate-resource-network",
+  ] as const
 
   return (
     <Card className="gap-4 py-5">
@@ -128,10 +136,20 @@ function DatabaseCard({ copy }: { copy: ReturnType<typeof useLanguage>["copy"] }
         <Database className="size-5" />
         {database.title}
       </div>
-      <div className="flex flex-col gap-2 px-6">
-        <div className="h-2 border-2 border-border bg-chart-3" />
-        <div className="h-2 w-4/5 border-2 border-border bg-chart-1" />
-        <div className="h-2 w-3/5 border-2 border-border bg-chart-4" />
+      <div className="flex flex-col gap-2.5 px-6">
+        {resourceIcons.map((Icon, index) => (
+          <div key={database.resources[index]} className="flex items-center gap-2">
+            <Icon className="size-4 shrink-0 text-main" aria-hidden="true" />
+            <div className="relative h-2.5 min-w-0 flex-1 overflow-hidden border-2 border-border bg-foreground/10">
+              <span
+                className={`absolute inset-y-0 left-0 block w-[35%] ${resourceAnimations[index]} ${resourceColors[index]}`}
+              />
+            </div>
+            <span className="w-12 text-right text-[9px] font-bold uppercase tracking-tight">
+              {database.resources[index]}
+            </span>
+          </div>
+        ))}
       </div>
       <p className="px-6 text-sm font-medium text-foreground/70">{database.task}</p>
       <p className="px-6 text-xs font-medium text-foreground/50">{database.meta}</p>
