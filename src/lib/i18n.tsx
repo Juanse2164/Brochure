@@ -50,8 +50,9 @@ const translations = {
         },
         rpa: {
           title: "Bots RPA",
-          task: "Migrando registros al sistema…",
-          meta: "1.842 / 2.000 · Un mes de trabajo, hecho en días",
+          task: "Replicando el trabajo de una persona, más rápido y sin errores…",
+          meta: "Un mes de trabajo, hecho en días",
+          approved: "Aprobado",
         },
         database: {
           title: "Bases de datos",
@@ -280,8 +281,9 @@ const translations = {
         },
         rpa: {
           title: "RPA Bots",
-          task: "Migrating records to the system…",
+          task: "Replicating a person's work, faster and without errors…",
           meta: "1,842 / 2,000 · One month of work, done in days",
+          approved: "Approved",
         },
         database: {
           title: "Databases",

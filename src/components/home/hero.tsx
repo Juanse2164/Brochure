@@ -10,6 +10,7 @@ import {
   HardDrive,
   Layers,
   Maximize2,
+  MousePointer2,
   Network,
   ShieldCheck,
 } from "lucide-react"
@@ -68,6 +69,40 @@ function ChatCard({ copy }: { copy: ReturnType<typeof useLanguage>["copy"] }) {
   )
 }
 
+function RpaBrowserAnimation({ approvedLabel }: { approvedLabel: string }) {
+  return (
+    <div
+      aria-hidden="true"
+      className="rpa-browser-animation relative mx-6 h-24 overflow-hidden border-2 border-border bg-background"
+    >
+      <div className="flex h-7 items-center gap-1.5 border-b-2 border-border px-2">
+        <span className="size-2 rounded-base border border-border bg-chart-2" />
+        <span className="size-2 rounded-base border border-border bg-chart-3" />
+        <span className="size-2 rounded-base border border-border bg-chart-4" />
+        <span className="ml-2 h-2 flex-1 border border-border bg-main/20" />
+      </div>
+      <div className="relative h-[calc(100%-1.75rem)] p-3">
+        <div className="absolute top-3 left-3 flex items-center gap-2">
+          <span className="rpa-browser-checkbox grid size-4 place-items-center border-2 border-border bg-background">
+            <Check className="rpa-browser-checkmark size-3" strokeWidth={4} />
+          </span>
+          <span className="h-2 w-20 border border-border bg-main/30" />
+        </div>
+        <div className="absolute top-10 left-3 flex gap-1.5">
+          <span className="h-1.5 w-14 border border-border bg-foreground/20" />
+          <span className="h-1.5 w-8 border border-border bg-foreground/20" />
+          <span className="h-1.5 w-5 border border-border bg-foreground/20" />
+        </div>
+        <div className="rpa-browser-approved absolute top-3 right-3 inline-flex items-center gap-1 border-2 border-border bg-chart-4 px-1.5 py-1 text-[9px] font-black uppercase">
+          <Check className="size-3" strokeWidth={4} />
+          {approvedLabel}
+        </div>
+        <MousePointer2 className="rpa-browser-cursor absolute size-4 fill-main text-foreground" />
+      </div>
+    </div>
+  )
+}
+
 function RpaCard({ copy }: { copy: ReturnType<typeof useLanguage>["copy"] }) {
   const rpa = copy.hero.deck.rpa
 
@@ -78,9 +113,7 @@ function RpaCard({ copy }: { copy: ReturnType<typeof useLanguage>["copy"] }) {
         {rpa.title}
       </div>
       <p className="px-6 text-sm font-medium text-foreground/70">{rpa.task}</p>
-      <div className="mx-6 h-2.5 overflow-hidden border-2 border-border bg-background">
-        <span className="animate-progress block h-full bg-main" />
-      </div>
+      <RpaBrowserAnimation approvedLabel={rpa.approved} />
       <p className="px-6 text-xs font-medium text-foreground/50">{rpa.meta}</p>
     </Card>
   )
