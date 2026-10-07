@@ -25,8 +25,19 @@ export function About() {
             </p>
             <div className="flex flex-wrap justify-center gap-2 px-4">
               {copy.about.card.certifications.map((certification) => (
-                <Badge key={certification} variant="secondary" className="font-bold">
-                  {certification}
+                <Badge
+                  key={certification.url}
+                  asChild
+                  variant="secondary"
+                  className="whitespace-normal text-center font-bold transition-colors hover:bg-main hover:text-main-foreground"
+                >
+                  <a
+                    href={certification.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {certification.label}
+                  </a>
                 </Badge>
               ))}
             </div>
